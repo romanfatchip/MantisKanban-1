@@ -10,8 +10,8 @@ class MantisKanbanPlugin extends MantisPlugin {
         $this->version = '1.2';
         
         $this->requires = array(
-            'MantisCore'    => '1.2.0',
-            'jQuery'        => '1.6.2',
+            'MantisCore'    => '2.0.0',
+//            'jQuery'        => '2.2.4',
         );
 
         $this->author   = 'Joanna Chlasta, Stefan Moises, Joscha Krug';
@@ -57,7 +57,12 @@ class MantisKanbanPlugin extends MantisPlugin {
      * @return array new link for the main menu
      */
     function main_menu() {
-        return array('<a href="' . plugin_page('kanban_page') . '">' . plugin_lang_get('main_menu_kanban') . '</a>',);
+//        return array('<a href="' . plugin_page('kanban_page') . '">' . plugin_lang_get('main_menu_kanban') . '</a>',);
+        return [[
+            'url' => 'plugin.php?page=MantisKanban/kanban_page',
+            'title' => 'Kanban',
+            'icon' => '',
+        ]];
     }
 
     /**

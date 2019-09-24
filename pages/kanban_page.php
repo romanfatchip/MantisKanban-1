@@ -13,22 +13,22 @@
  * MantisBT Core API's
  */
 require_once( 'core.php' );
-require_once( 'compress_api.php' );
-require_once( 'filter_api.php' );
-require_once( 'last_visited_api.php' );
-require_once( 'current_user_api.php' );
-require_once( 'bug_api.php' );
-require_once( 'string_api.php' );
-require_once( 'date_api.php' );
-require_once( 'icon_api.php' );
-require_once( 'html_api.php' );
+require_api( 'compress_api.php' );
+require_api( 'filter_api.php' );
+require_api( 'last_visited_api.php' );
+require_api( 'current_user_api.php' );
+require_api( 'bug_api.php' );
+require_api( 'string_api.php' );
+require_api( 'date_api.php' );
+require_api( 'icon_api.php' );
+require_api( 'html_api.php' );
 /**
  * Plugin includes
  */
 // Projax for AJAX buttons etc.
-require_once( 'projax_api.php' );
+//require_api( 'projax_api.php' );
 // custom Kanban functions
-require_once( 'kanban_api.php' );
+plugin_require_api( 'core/kanban_api.php' );
 
 // GENERAL SETTINGS
 /*
@@ -103,8 +103,8 @@ compress_enable();
 # don't index the kanban page
 html_robots_noindex();
 
-html_page_top1( plugin_lang_get( 'kanban_link' ) );
-html_page_top2();
+//html_page_top1( plugin_lang_get( 'kanban_link' ) );
+//html_page_top2();
 print_recently_visited();
 
 $f_page_number		= gpc_get_int( 'page_number', 1 );
@@ -354,4 +354,4 @@ if( helper_get_current_project() != 0 || $pdisplay != "splitted" )
 </div>
 
 <?php
-	html_page_bottom();
+//	html_page_bottom();

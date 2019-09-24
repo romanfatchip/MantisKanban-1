@@ -21,9 +21,9 @@
  * */
 require_once( 'core.php' );
 
-require_once( 'bug_api.php' );
-require_once( 'bugnote_api.php' );
-require_once( 'custom_field_api.php' );
+require_api( 'bug_api.php' );
+require_api( 'bugnote_api.php' );
+require_api( 'custom_field_api.php' );
 
 /**
  * updates the status field

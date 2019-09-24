@@ -20,8 +20,8 @@
  */
 require_once( 'core.php' );
 
-require_once( 'logging_api.php' );
-require_once( 'kanban_ajax_api.php' );
+require_api( 'logging_api.php' );
+require_api( 'kanban_ajax_api.php' );
 
 auth_ensure_user_authenticated();
 
